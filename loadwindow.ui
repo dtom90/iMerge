@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoadWindow</class>
+ <widget class="QWidget" name="LoadWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>403</width>
+    <height>295</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="Form">
+   <widget class="QLabel" name="welcome_label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>0</y>
+      <width>301</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Serif</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Welcome to iMerge.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="example_button">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Example</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sel_button">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>140</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Select
+ Images</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="instr_label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>70</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Choose how to acquire images for merging:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dir_button">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>140</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Select
+Directory</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="error_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Mangal</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+ <connection>
+   <sender>sel_button</sender>
+   <signal>clicked()</signal>
+   <receiver>LoadWindow</receiver>
+   <slot>handleFileSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>278</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>323</x>
+     <y>265</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>example_button</sender>
+   <signal>clicked()</signal>
+   <receiver>LoadWindow</receiver>
+   <slot>handleExampleSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>144</x>
+     <y>267</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dir_button</sender>
+   <signal>clicked()</signal>
+   <receiver>LoadWindow</receiver>
+   <slot>handleFolderSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>222</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>247</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>handleFileSelection()</slot>
+  <slot>handleExampleSelection()</slot>
+  <slot>handleFolderSelection()</slot>
+ </slots>
+</ui>
